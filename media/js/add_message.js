@@ -11,8 +11,4 @@ form.addEventListener('submit', evt => {
     body: new FormData(form)
   });
 
-  request
-    .then(resp => resp.json())
-    .then(json => console.log(json));
-
 });

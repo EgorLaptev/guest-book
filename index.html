@@ -11,33 +11,7 @@
 
 <body>
 
-  <div class="messages">
-
-    <div class="message">
-      <p class="content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum hic, eligendi asperiores! Architecto sit debitis, amet perspiciatis nam similique soluta commodi labore, corporis quia. Expedita ea quam cumquedelectuspariatur.
-      </p>
-      <span class="author">Egor Laptev</span>
-      <time class="date" datetime="2021-03-01">01.03.2021</time>
-    </div>
-
-    <div class="message">
-      <p class="content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum hic, eligendi asperiores! Architecto sit debitis, amet perspiciatis nam similique soluta commodi labore, corporis quia. Expedita ea quam cumquedelectuspariatur.
-      </p>
-      <span class="author">Egor Laptev</span>
-      <time class="date" datetime="2021-03-01">01.03.2021</time>
-    </div>
-
-    <div class="message">
-      <p class="content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum hic, eligendi asperiores! Architecto sit debitis, amet perspiciatis nam similique soluta commodi labore, corporis quia. Expedita ea quam cumquedelectuspariatur.
-      </p>
-      <span class="author">Egor Laptev</span>
-      <time class="date" datetime="2021-03-01">01.03.2021</time>
-    </div>
-
-  </div>
+  <div class="messages" id="messages"></div>
 
   <form action="core/add_message.php" method="POST" id="message_form">
     <input type="text" name="name" placeholder="Name" required>
@@ -45,7 +19,8 @@
     <input type="submit" name="add_message" value="Send" required>
   </form>
 
-  <script src="media/js/script.js" charset="utf-8"></script>
+  <script src="media/js/add_message.js" charset="utf-8"></script>
+  <script src="media/js/show_messages.js" charset="utf-8"></script>
 
 </body>
 
