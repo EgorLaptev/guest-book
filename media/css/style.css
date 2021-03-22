@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+/* Scroll bar customize */
+.messages::-webkit-scrollbar {
+  width: 0px;
+  /* ширина scrollbar */
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -15,11 +25,13 @@ body {
 
 /* Messages */
 .messages {
+  padding-bottom: 75px;
   width: 90%;
   max-width: 1040px;
   margin: 0 auto;
   color: #ddd;
   font-family: sans-serif;
+  overflow-y: scroll;
 }
 
 .message {
@@ -57,6 +69,8 @@ body {
   grid-gap: 10px;
   grid-template-columns: 2fr 4fr 1fr;
   background-color: #222;
+  border: 1px solid #111;
+  border-bottom: none;
   border-radius: 3px 3px 0 0;
 }
 
@@ -87,4 +101,23 @@ body {
 
 #message_form input[type='submit']:hover {
   background-color: #bbb;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    justify-content: flex-end;
+  }
+
+  #message_form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #message_form input,
+  #message_form textarea {
+    grid-column: 1 / -1;
+  }
+
+  .messages {
+    padding-bottom: 160px;
+  }
 }
