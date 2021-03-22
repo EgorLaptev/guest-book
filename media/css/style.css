@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Messages */
+.messages {
+  width: 90%;
+  max-width: 1040px;
+  margin: 0 auto;
+  color: #ddd;
+  font-family: sans-serif;
+}
+
+.message {
+  padding: 15px;
+  margin: 20px 0;
+  background-color: #222;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.message .content {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.message .date,
+.message .author {
+  color: #111;
+  font-weight: bold;
+}
+
+.message .date {
+  float: right;
+}
+
+/* Form */
+#message_form {
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 4fr 1fr;
+  background-color: #222;
+  border-radius: 3px 3px 0 0;
+}
+
+#message_form input,
+#message_form textarea {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 15px;
+  resize: none;
+}
+
+#message_form input::placeholder,
+#message_form textarea::placeholder {
+  transition: opacity .2s;
+}
+
+#message_form input:hover::placeholder,
+#message_form textarea:hover::placeholder {
+  opacity: 0;
+}
+
+#message_form input[type='submit'] {
+  transition: background .3s;
+  cursor: pointer;
+}
+
+#message_form input[type='submit']:hover {
+  background-color: #bbb;
+}
